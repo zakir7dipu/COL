@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/flaticon.css") }}">
 
         <!-- Plugins CSS -->
-        <link rel="stylesheet" href="{{ asset("assets/css/plugins/bootstrap.min.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/swiper-bundle.min.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/aos.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/nice-select.css") }}">
@@ -32,22 +31,23 @@
 
         <!-- JS
     ============================================ -->
-        <script src="{{ asset("assets/js/vendor/jquery-1.12.4.min.js") }}"></script>
-        <script src="{{ asset("assets/js/vendor/modernizr-3.11.2.min.js") }}"></script>
+{{--        <script src="{{ asset("assets/js/vendor/jquery-1.12.4.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/vendor/modernizr-3.11.2.min.js") }}"></script>--}}
 
         <!-- Bootstrap JS -->
-        <script src="{{ asset("assets/js/plugins/popper.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/bootstrap.min.js") }}"></script>
+{{--        <script src="{{ asset("assets/js/plugins/popper.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/bootstrap.min.js") }}"></script>--}}
 
         <!-- Plugins JS -->
         <script src="{{ asset("assets/js/plugins/swiper-bundle.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/aos.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/waypoints.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/jquery.counterup.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/jquery.nice-select.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/back-to-top.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/jquery.powertip.min.js") }}"></script>
-        <script src="{{ asset("assets/js/plugins/jquery.magnific-popup.min.js") }}"></script>
+
+{{--        <script src="{{ asset("assets/js/plugins/aos.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/waypoints.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/jquery.counterup.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/jquery.nice-select.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/back-to-top.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/jquery.powertip.min.js") }}"></script>--}}
+{{--        <script src="{{ asset("assets/js/plugins/jquery.magnific-popup.min.js") }}"></script>--}}
 
         <!-- Scripts -->
         @routes
