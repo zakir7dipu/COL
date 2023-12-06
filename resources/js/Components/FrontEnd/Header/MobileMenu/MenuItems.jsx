@@ -6,8 +6,11 @@ function MenuItems(props) {
         <div className="offcanvas-body">
             <div className="offcanvas-menu">
                 <ul className="main-menu">
-                    <li className="active-menu">
-                        <Link href="/">Home</Link>
+                    <li className="active-menu menu-item-has-children">
+                        <span className="mobile-menu-expand"></span>
+                        <Link href="#">Home</Link>
+                        <span className="menu-icon"></span>
+                        <span className="menu-expand"></span>
                         <ul className="sub-menu">
                             <li><Link href="index-2.html">Main Demo</Link></li>
                             <li><Link href="index-3.html">Course Hub</Link></li>
