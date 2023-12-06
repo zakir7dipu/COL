@@ -1,29 +1,19 @@
 <?php
 
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [GuestController::class, 'home']);
+Route::get('/about-us', [GuestController::class, 'about'])->name('about');
+Route::get('/events', [GuestController::class, 'events'])->name('events');
+Route::get('/courses', [GuestController::class, 'courses'])->name('courses');
+Route::get('/blog', [GuestController::class, 'blog'])->name('blog');
+Route::get('/gallery', [GuestController::class, 'gallery'])->name('gallery');
+Route::get('/contact', [GuestController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

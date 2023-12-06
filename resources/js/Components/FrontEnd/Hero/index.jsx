@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Shape from "@/Components/FrontEnd/Hero/Shape.jsx";
 import {Col, Container, Row} from "react-bootstrap";
 import {router} from "@inertiajs/react";
@@ -6,6 +6,13 @@ import HeroShape from '../../../../../public/assets/images/shape/hero5-shape1.pn
 import HeroImage from '../../../../../public/assets/images/hero5-img.png';
 
 function Index(props) {
+
+    useEffect(()=>{
+        AOS.init({
+            duration: 1200,
+            once: true,
+        });
+    },[])
     return (
         <div className="upstudy-hero-section-05 section">
             <Shape/>
@@ -13,10 +20,10 @@ function Index(props) {
                 <Row className="align-items-center">
                     <Col lg={6}>
                         <div className="hero-content">
-                            <h2 className="title"> {/*dataAos="fade-up" dataAosDelay="700"*/}
+                            <h2 className="title" data-aos="fade-up" data-aos-delay="700">
                                 Online <span>language & culture</span> learning
                                 platform</h2>
-                            <div className="hero-btn-wrap"> {/*dataAos="fade-up" dataAosDelay="900"*/}
+                            <div className="hero-btn-wrap" data-aos="fade-up" data-aos-delay="900">
                                 <div className="hero-btn">
                                     <a className="btn" href={route('register')}>Try Free Courses</a>
                                 </div>

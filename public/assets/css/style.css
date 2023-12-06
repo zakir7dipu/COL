@@ -2667,6 +2667,8 @@ textarea:-ms-input-placeholder {
   font-size: 18px;
   background: #f6520a;
   padding: 0 50px;
+    color: #f0f0f0;
+    font-weight: 800;
 }
 
 .upstudy-hero-section-05 .hero-content .hero-btn-wrap .hero-btn .btn:hover {

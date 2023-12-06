@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from "@inertiajs/react";
+import {useDispatch} from "react-redux";
+import {mobileMenuAction} from "@/Featurs/Menu/MenuSlice.js";
 
 function HeaderMeta(props) {
+    const dispatch = useDispatch()
     return (
         <div className="header-meta">
 
@@ -16,7 +19,10 @@ function HeaderMeta(props) {
             {/*</div>*/}
 
             <div className="header-toggle d-lg-none">
-                <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" onClick={e=>{
+                    e.preventDefault()
+                    dispatch(mobileMenuAction())
+                }}>
                     <span></span>
                     <span></span>
                     <span></span>

@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/swiper-bundle.min.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/aos.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/nice-select.css") }}">
+
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/jquery.powertip.min.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/plugins/magnific-popup.css") }}">
 
@@ -31,7 +32,7 @@
 
         <!-- JS
     ============================================ -->
-{{--        <script src="{{ asset("assets/js/vendor/jquery-1.12.4.min.js") }}"></script>--}}
+        <script src="{{ asset("assets/js/vendor/jquery-1.12.4.min.js") }}"></script>
 {{--        <script src="{{ asset("assets/js/vendor/modernizr-3.11.2.min.js") }}"></script>--}}
 
         <!-- Bootstrap JS -->
@@ -41,10 +42,10 @@
         <!-- Plugins JS -->
         <script src="{{ asset("assets/js/plugins/swiper-bundle.min.js") }}"></script>
 
-{{--        <script src="{{ asset("assets/js/plugins/aos.js") }}"></script>--}}
+        <script src="{{ asset("assets/js/plugins/aos.js") }}"></script>
 {{--        <script src="{{ asset("assets/js/plugins/waypoints.min.js") }}"></script>--}}
 {{--        <script src="{{ asset("assets/js/plugins/jquery.counterup.min.js") }}"></script>--}}
-{{--        <script src="{{ asset("assets/js/plugins/jquery.nice-select.min.js") }}"></script>--}}
+        <script src="{{ asset("assets/js/plugins/jquery.nice-select.min.js") }}"></script>
 {{--        <script src="{{ asset("assets/js/plugins/back-to-top.js") }}"></script>--}}
 {{--        <script src="{{ asset("assets/js/plugins/jquery.powertip.min.js") }}"></script>--}}
 {{--        <script src="{{ asset("assets/js/plugins/jquery.magnific-popup.min.js") }}"></script>--}}
