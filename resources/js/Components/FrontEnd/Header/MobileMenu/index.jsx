@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import MenuItems from "@/Components/FrontEnd/Header/MobileMenu/MenuItems.jsx";
 import {Link} from "@inertiajs/react";
 import ApplicationLogo from '../../../../../../public/assets/images/logo-white.png'
