@@ -22,6 +22,7 @@ class GuestController extends Controller
     public function about() {
         return Inertia::render('About', [
             'page' => "About",
+            'title' => "About Us",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
@@ -32,6 +33,7 @@ class GuestController extends Controller
     public function events() {
         return Inertia::render('Events', [
             'page' => "Events",
+            'title' => "All Event",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
@@ -42,6 +44,7 @@ class GuestController extends Controller
     public function courses() {
         return Inertia::render('Courses', [
             'page' => "Courses",
+            'title' => "All Course",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
@@ -52,6 +55,7 @@ class GuestController extends Controller
     public function blog() {
         return Inertia::render('Blog', [
             'page' => "Blog",
+            'title' => "Blog",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
@@ -62,6 +66,7 @@ class GuestController extends Controller
     public function gallery() {
         return Inertia::render('Gallery', [
             'page' => "Gallery",
+            'title' => "Our Memory",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
@@ -72,6 +77,7 @@ class GuestController extends Controller
     public function contact() {
         return Inertia::render('Contact', [
             'page' => "Contact",
+            'title' => "Contact Us",
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,

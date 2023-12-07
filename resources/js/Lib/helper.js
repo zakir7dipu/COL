@@ -34,6 +34,44 @@
 //     Notify("warning", warning)
 // }
 
+export const highlightKeyword = (string, highlightWord, position) => {
+    let stringArray = string.split(" ");
+    let positionArray = ["s", "m", "e"];
+    let inputString = string;
+    let word = "";
+    let word2 = "";
+
+    let lastIndex = stringArray.length - highlightWord
+    let middleIndex = Math.floor(lastIndex / 2);
+
+
+    if(position === "s") {
+        for (let i = 0; i < highlightWord; i++) {
+            word = word +" "+ stringArray[i]
+        }
+    } else if(position === "m") {
+        for (let i = middleIndex; i < (middleIndex + highlightWord); i++) {
+            word = word +" "+ stringArray[i]
+        }
+
+    } else if(position === "e") {
+        for (let i = lastIndex; i < (lastIndex + highlightWord); i++) {
+            word = word +" "+ stringArray[i]
+        }
+    } else {
+        word = ""
+    }
+    return highlightWords(inputString, word)
+}
+
+function highlightWords(inputString, word) {
+    const highlightedString = inputString.replace(
+        new RegExp(`(${word})`, 'gi'),
+        '<span>$1</span>'
+    );
+    return highlightedString;
+}
+
 export const uid = function () {
     return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
@@ -65,11 +103,11 @@ export const goToExternalLink = (path) => {
     window.open(path, '_blank');
 }
 
-export const goToInternalLink = (path)=> {
+export const goToInternalLink = (path) => {
     window.open(mainPath + path, '_blank');
 }
 
-export const useInternalLink = (path)=> {
+export const useInternalLink = (path) => {
     return mainPath + path
 }
 
