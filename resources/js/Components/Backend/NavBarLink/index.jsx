@@ -20,7 +20,7 @@ function Index({link, linkName, hasSubMenu, menuIcon, children}) {
     }
     return (
         <>
-            <Link className={hasSubMenu ? "has-arrow":''} to={link} aria-expanded="false" onClick={e => {
+            <Link className={hasSubMenu ? "has-arrow":''} href={link} aria-expanded="false" onClick={e => {
                 if (hasSubMenu) {
                     e.preventDefault()
                     collapseSubManu(e)

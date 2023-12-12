@@ -18,7 +18,7 @@ function Index(props) {
                         <li className="nav-label">Dashboard</li>
                         <li>
                             <NavBarLink
-                                link={'/bsl/admin'}
+                                link={route(dashboard)}
                                 linkName={'Dashboard'}
                                 hasSubMenu={false}
                                 menuIcon={<i className="icon-speedometer menu-icon"></i>}
