@@ -38,7 +38,14 @@ const initialData = {
             page: "Contact"
         }
     ],
-    drawerMenu: false
+    drawerMenu: false,
+    isOpenBackendSideNav: true,
+    rightHeader: {
+        messageBtn: false,
+        notificationBtn: false,
+        languageBtn: false,
+        profileBtn: false,
+    }
 }
 
 export const MenuSlice = createSlice({
@@ -53,9 +60,22 @@ export const MenuSlice = createSlice({
         },
         mobileMenuAction: (state) => {
             state.drawerMenu = !state.drawerMenu
+        },
+        backendSideNaAction: (state) => {
+            state.isOpenBackendSideNav = !state.isOpenBackendSideNav
+        },
+        rightHeaderAction: (state, {payload}) => {
+            let actions = Object.keys(state.rightHeader).map(key => ({
+                key: key,
+                value: payload === key ? !state.rightHeader[key]:false
+            }));
+            state.rightHeader = actions.reduce((acc, obj) => {
+                acc[obj.key] = obj.value;
+                return acc;
+            }, {});
         }
     }
 })
 
-export const {setActiveMenu,mobileMenuAction} = MenuSlice.actions
+export const {setActiveMenu,mobileMenuAction, backendSideNaAction,rightHeaderAction} = MenuSlice.actions
 export default MenuSlice.reducer

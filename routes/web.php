@@ -3,6 +3,7 @@
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\ProfileController;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,9 +16,10 @@ Route::get('/blog', [GuestController::class, 'blog'])->name('blog');
 Route::get('/gallery', [GuestController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [GuestController::class, 'contact'])->name('contact');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::prefix('/bsl')->group( function (){
+    Route::get('/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('dashboard');
+
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

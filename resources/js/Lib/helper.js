@@ -45,18 +45,18 @@ export const highlightKeyword = (string, highlightWord, position) => {
     let middleIndex = Math.floor(lastIndex / 2);
 
 
-    if(position === "s") {
+    if (position === "s") {
         for (let i = 0; i < highlightWord; i++) {
-            word = word +" "+ stringArray[i]
+            word = word + " " + stringArray[i]
         }
-    } else if(position === "m") {
+    } else if (position === "m") {
         for (let i = middleIndex; i < (middleIndex + highlightWord); i++) {
-            word = word +" "+ stringArray[i]
+            word = word + " " + stringArray[i]
         }
 
-    } else if(position === "e") {
+    } else if (position === "e") {
         for (let i = lastIndex; i < (lastIndex + highlightWord); i++) {
-            word = word +" "+ stringArray[i]
+            word = word + " " + stringArray[i]
         }
     } else {
         word = ""
@@ -74,6 +74,31 @@ function highlightWords(inputString, word) {
 
 export const uid = function () {
     return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+export const activeDashboardCss = (isActive) => {
+    let mainBody = document.querySelector('body');
+    console.log(mainBody)
+    if (isActive) {
+        mainBody.dataset.themeVersion = 'light';
+        mainBody.dataset.layout = 'vertical';
+        mainBody.dataset.navHeaderbg = 'color_1';
+        mainBody.dataset.headerbg = 'color_1';
+        mainBody.dataset.sidebarStyle = 'full';
+        mainBody.dataset.sibebarbg = 'color_1';
+        mainBody.dataset.idebarPosition = 'static';
+        mainBody.dataset.headerPosition = 'static';
+        mainBody.dataset.container = 'wide';
+        mainBody.setAttribute('direction', 'ltr')
+    } else {
+        const dataList = [
+            "theme-version", "layout", "nav-headerbg", "headerbg", "sidebar-style", "sibebarbg", "idebar-position", "header-position", "container"
+        ]
+        mainBody.removeAttribute("direction");
+        dataList.map(item => {
+            mainBody.removeAttribute(`data-${item}`);
+        })
+    }
 }
 
 export const truncateString = (str, n) => {

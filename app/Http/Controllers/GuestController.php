@@ -10,6 +10,7 @@ use Inertia\Inertia;
 class GuestController extends Controller
 {
     public function home() {
+//        "dashboard" => false,
         return Inertia::render('Welcome', [
             'page' => "Home",
             'laravelVersion' => Application::VERSION,
