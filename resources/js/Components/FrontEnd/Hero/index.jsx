@@ -25,7 +25,7 @@ function Index(props) {
                                 platform</h2>
                             <div className="hero-btn-wrap" data-aos="fade-up" data-aos-delay="900">
                                 <div className="hero-btn">
-                                    <a className="btn" href={route('register')}>Try Free Courses</a>
+                                    <a className="btn" href="#">Try Free Courses</a>
                                 </div>
                                 <div className="hero-call">
                                     <div className="icon">

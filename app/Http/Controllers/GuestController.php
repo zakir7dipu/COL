@@ -12,8 +12,6 @@ class GuestController extends Controller
     public function home() {
         return Inertia::render('Welcome', [
             'page' => "Home",
-            'canLogin' => Route::has('login'),
-            'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
         ]);
